@@ -1,5 +1,4 @@
 import { createClient } from '@supabase/supabase-js'
-import { MarkerType } from '@reactflow/core'
 
 const supabase = createClient(
   process.env.VITE_SUPABASE_URL,
