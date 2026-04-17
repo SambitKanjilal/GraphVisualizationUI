@@ -35,11 +35,44 @@
   margin: 0 4px;
 }
 
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
 .toolbar-hint {
   font-size: 12px;
   color: #4a5568;
-  margin-left: auto;
   white-space: nowrap;
+}
+
+.presence {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: #1e2130;
+  border: 1px solid #2a2d3e;
+  font-size: 12px;
+  color: #94a3b8;
+  white-space: nowrap;
+}
+
+.presence-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 6px #22c55e;
+  flex-shrink: 0;
+}
+
+.presence-count {
+  font-weight: 600;
+  color: #e2e8f0;
 }
 
 .btn {

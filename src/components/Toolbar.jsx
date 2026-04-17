@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import './Toolbar.css'
 
-export default function Toolbar({ onAddNode, onDeleteSelected, onExport, onImport }) {
+export default function Toolbar({ onAddNode, onDeleteSelected, onExport, onImport, connectedCount, isOnline }) {
   const fileInputRef = useRef(null)
 
   const handleImportClick = () => {
@@ -52,8 +52,16 @@ export default function Toolbar({ onAddNode, onDeleteSelected, onExport, onImpor
         />
       </div>
 
-      <div className="toolbar-hint">
-        Double-click a node to rename &nbsp;·&nbsp; Drag between handles to connect
+      <div className="toolbar-right">
+        {isOnline && (
+          <div className="presence" title={`${connectedCount} user${connectedCount === 1 ? '' : 's'} connected`}>
+            <span className="presence-dot" />
+            <span className="presence-count">{connectedCount}</span>
+          </div>
+        )}
+        <div className="toolbar-hint">
+          Double-click to edit &nbsp;·&nbsp; Drag handles to connect
+        </div>
       </div>
     </header>
   )
